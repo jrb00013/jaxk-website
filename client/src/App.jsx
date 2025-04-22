@@ -81,9 +81,9 @@ function App() {
 
   return (
     <div className="app">
-      <h1 className ="JaxK">JaxK Design Corp.</h1>
-      <h2 style={{textAlign: 'center', color: 'purple',fontSize: "36pt"}}>  Electrical Manufacturing Projects </h2>
-      <h3 style={{textAlign: 'center', color: 'purple', fontSize: "30pt"}}> Welcome!</h3>
+      <h1 className ="JaxK">JaxK Corp</h1>
+      <h2 style={{textAlign: 'center', color: 'purple',fontSize: "66pt"}}> Software Solutions and Design </h2>
+      <h3 style={{textAlign: 'center', color: 'purple', fontSize: "60pt"}}> Welcome!</h3>
       <p className="Claire"> UI designed by Claire Hudson and implemented by Joe Black</p>
       <img src={jaxklogo} alt="JaxK Logo" className = "JaxKLogo" />
       <img src={jaxklogo} alt="JaxK Logo" className = "JaxKLogo2" />

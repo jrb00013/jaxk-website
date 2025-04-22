@@ -1,18 +1,46 @@
 // server/config/firebaseConfig.js
-require("dotenv").config();
+const serviceAccount = require('../config/jaxk-website-firebase-adminsdk-fbsvc-4461c645c4.json');
 
 module.exports = {
-  type: process.env.FIREBASE_TYPE,
-  project_id: process.env.FIREBASE_PROJECT_ID,
-  private_key_id: process.env.FIREBASE_PRIVATE_KEY_ID,
-  private_key: process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n'),
-  client_email: process.env.FIREBASE_CLIENT_EMAIL,
-  client_id: process.env.FIREBASE_CLIENT_ID,
-  auth_uri: process.env.FIREBASE_AUTH_URI,
-  token_uri: process.env.FIREBASE_TOKEN_URI,
-  auth_provider_x509_cert_url: process.env.FIREBASE_AUTH_PROVIDER_X509_CERT_URL,
-  client_x509_cert_url: process.env.FIREBASE_CLIENT_X509_CERT_URL
+  type: serviceAccount.type,
+  project_id: serviceAccount.project_id,
+  private_key_id: serviceAccount.private_key_id,
+  private_key: serviceAccount.private_key.replace(/\\n/g, '\n'),
+  client_email: serviceAccount.client_email,
+  client_id: serviceAccount.client_id,
+  auth_uri: serviceAccount.auth_uri,
+  token_uri: serviceAccount.token_uri,
+  auth_provider_x509_cert_url: serviceAccount.auth_provider_x509_cert_url,
+  client_x509_cert_url: serviceAccount.client_x509_cert_url,
+  databaseURL: `https://jaxk-website-default-rtdb.firebaseio.com`
 };
+
+
+
+
+
+
+
+
+
+
+
+// // server/config/firebaseConfig.js
+//older one
+// require("dotenv").config();
+
+// module.exports = {
+//   type: process.env.FIREBASE_TYPE,
+//   project_id: process.env.FIREBASE_PROJECT_ID,
+//   private_key_id: process.env.FIREBASE_PRIVATE_KEY_ID,
+//   private_key: process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+//   client_email: process.env.FIREBASE_CLIENT_EMAIL,
+//   client_id: process.env.FIREBASE_CLIENT_ID,
+//   auth_uri: process.env.FIREBASE_AUTH_URI,
+//   token_uri: process.env.FIREBASE_TOKEN_URI,
+//   auth_provider_x509_cert_url: process.env.FIREBASE_AUTH_PROVIDER_X509_CERT_URL,
+//   client_x509_cert_url: process.env.FIREBASE_CLIENT_X509_CERT_URL
+// };
 
 
 

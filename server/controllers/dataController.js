@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
-const User = require('../models/dataModel');  // Assume this model exists for user data
+const User = require('../models/User');  // Assume this model exists for user data
 
 const registerUser = async (req, res) => {
   try {
@@ -50,4 +50,17 @@ const loginUser = async (req, res) => {
   }
 };
 
-module.exports = { registerUser, loginUser };
+const getUserData = async (req, res) => {
+  try {
+    const user = await User.findById(req.user.id).select('-password');
+    res.json(user);
+  } catch (error) {
+    res.status(500).json({ message: 'Server error' });
+  }
+};
+
+module.exports = { 
+  signUp: registerUser,  // This maps registerUser to signUp for your routes
+  loginUser,
+  getUserData
+};

@@ -1,13 +1,16 @@
 // server/config/firebaseAdmin.js
 const admin = require('firebase-admin');
-const firebaseConfig = require('./firebaseConfig');
+const serviceAccount = require('./jaxk-website-firebase-adminsdk-fbsvc-4461c645c4.json');
 
-// Initialize Firebase Admin SDK with the service account credentials
-admin.initializeApp({
-  credential: admin.credential.cert(firebaseConfig),
-});
+if (!admin.apps.length) {
+  admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+    databaseURL: 'https://jaxk-website-default-rtdb.firebaseio.com'
+  });
+}
 
-const db = admin.firestore(); // Firestore database instance (you can add other services as needed)
-const auth = admin.auth(); // Firebase Admin authentication instance
+const auth = admin.auth();
+const firestore = admin.firestore();
+const realtimeDB = admin.database();
 
-module.exports = { admin, db, auth };
+module.exports = { admin, auth, firestore, realtimeDB };
