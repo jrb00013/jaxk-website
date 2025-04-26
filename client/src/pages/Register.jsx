@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+// component imports
+import Navbar from '../components/Navbar';
+
 const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -19,7 +22,8 @@ const Register = () => {
 
   return (
     <div>
-      <h2>Register</h2>
+     <Navbar />
+      <h2 style={{ textAlign: 'center', color: 'purple', fontSize: '60pt',  fontFamily: '"Tagesschrift", system-ui' }}>Register</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="email"

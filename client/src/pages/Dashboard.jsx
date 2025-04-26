@@ -5,9 +5,13 @@ import {
   updateData,
   deleteData,
 } from '../api/firebaseApi';
+
 import jaxklogo from '../assets/images/jaxklogo.png';
 import clairelogo from '../assets/images/cute.jpg';
 import logo from '../assets/images/logo.svg';
+import Navbar from '../components/Navbar';
+import SearchBar from '../components/SearchBar';
+import "../styles/styles.css"
 
 function Dashboard() {
   const [data, setData] = useState([]);
@@ -64,14 +68,15 @@ function Dashboard() {
 
   return (
     <div>
-      <h2 style={{ textAlign: 'center', color: 'purple', fontSize: '60pt' }}>
+     <Navbar />
+      <h2 style={{ textAlign: 'center', color: 'purple', fontSize: '60pt' ,  fontFamily: '"Tagesschrift", system-ui'}}>
         Dashboard
       </h2>
-      <p className="Claire">
+      {/* <p className="Claire">
         UI designed by Claire Hudson and implemented by Joe Black
-      </p>
+      </p> */}
       <img src={jaxklogo} alt="JaxK Logo" className="JaxKLogo" />
-      <img src={clairelogo} alt="Claire Logo" />
+      {/* <img src={clairelogo} alt="Claire Logo" /> */}
       <img src={logo} alt="Logo" />
 
       <form onSubmit={handleSubmit} className="form">

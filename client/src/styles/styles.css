@@ -15,19 +15,16 @@
 
   }
 
+
   .JaxKLogo {
-    text-align: center;
-    display: block;
-    margin-left: auto;
-
+    display: block;              /* Ensures the image behaves as a block element (for centering) */
+    margin: 0 auto;              /* Centers the image horizontally */
+    border-radius: 50%;          /* Makes the edges transparent (rounds the corners) */
+    max-width: 200px;            /* Makes the image bigger (you can adjust the size as needed) */
+    height: auto;                /* Maintains aspect ratio */
+    filter: opacity(0.9);        /* Optionally, you can adjust the opacity for transparency effect */
   }
 
-  .JaxKLogo2 {
-    text-align: center;
-    display: block;
-    margin-right: auto;
-
-  }
 
   .Claire {
     text-align: center;
