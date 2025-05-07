@@ -27,9 +27,13 @@ cd jaxk-website
 
 npm install
 
-### 3️⃣ Install Dependencies in Server Directory 
+### 3️⃣ Install Dependencies in Server Directory and Client Directory
 
 cd server
+
+npm install
+
+cd client
 
 npm install
 
