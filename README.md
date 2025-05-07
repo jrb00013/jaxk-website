@@ -20,6 +20,7 @@ Follow these instructions to set up, run, and develop the project locally.
 ### 1️⃣ Clone the Repository
 
 git clone https://github.com/YOUR-USERNAME/jaxk-website.git
+
 cd jaxk-website
 
 ### 2️⃣ Install Dependencies in root directory of project
