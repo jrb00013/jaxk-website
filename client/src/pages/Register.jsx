@@ -3,6 +3,7 @@ import axios from 'axios';
 
 // component imports
 import Navbar from '../components/Navbar';
+import neptune from  '../assets/images/neptune.png';
 
 const Register = () => {
   const [email, setEmail] = useState('');
@@ -42,6 +43,9 @@ const Register = () => {
         {error && <p>{error}</p>}
         <button type="submit">Register</button>
       </form>
+
+
+       <img src={neptune} alt="SurgeNeptune" className="Neptune"/>
     </div>
   );
 };

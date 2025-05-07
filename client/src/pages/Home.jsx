@@ -4,6 +4,7 @@ import "../styles/index.css"
 import "../styles/Home.css"
 import "../styles/styles.css"
 import jaxklogo from '../assets/images/jaxklogo.png';
+import neptune from '../assets/images/neptune.png';
 
 
 function Home() {
@@ -18,6 +19,7 @@ function Home() {
           This is the home page. Implemented and Designed by Joe Black.
         </p>
         <img src={jaxklogo} alt="JaxK Logo" className="JaxKLogo" />
+        
       </div>    
     </div>
   );
