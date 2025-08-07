@@ -1,5 +1,4 @@
 // server/server.js
-require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -13,7 +12,7 @@ const app = express();
 
 // CORS configuration
 const corsOptions = {
-  origin: 'http://localhost:5173',
+  origin: ['http://localhost:5173', 'http://jaxk_client:3000'],
   methods: 'GET,POST,PUT,DELETE',
   allowedHeaders: 'Content-Type,Authorization',
 };
@@ -42,7 +41,7 @@ realtimeDB.ref('test-connection').set({
   console.error('❌ Error writing to Realtime DB: Failed to Connect', err);
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = 5000; // Default port, can be overridden by environment variable
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

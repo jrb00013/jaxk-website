@@ -1,16 +1,30 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+// Optional: disable browser and Vite cache completely
+const noCacheMiddleware = () => ({
+  name: 'no-cache',
+  configureServer(server) {
+    server.middlewares.use((_, res, next) => {
+      res.setHeader('Cache-Control', 'no-store');
+      next();
+    });
+  }
+});
+
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), noCacheMiddleware()],
+  cacheDir: false, // Turn off Vite's local cache
   server: {
-    host: 'localhost',
+    host: '0.0.0.0', // Needed for Docker container access
     port: 5173,
     strictPort: true,
     watch: {
       usePolling: true,
     },
-    hmr: true
+    hmr: {
+      clientPort: 5173, // Required for HMR in Docker
+    }
   },
   build: {
     outDir: 'dist',
@@ -24,7 +38,6 @@ export default defineConfig({
     }
   }
 })
-
 
 
 
