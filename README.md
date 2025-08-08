@@ -38,7 +38,7 @@ cd client
 npm install
 
 ### 4️⃣ Run Project in Server Directory
-
+```
 cd server
 
 npm run dev
@@ -49,6 +49,12 @@ npm install -g npm@11.3.0
 UPDATE NPM:
 
 npm install -g npm@11.3.0 
+```
 
+## Running with Docker
 
+```
+pip install docker
+python run.py
 
+```

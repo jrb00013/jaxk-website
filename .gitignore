@@ -28,3 +28,4 @@ config/firebase-admin.js
 
 node_modules/
 jaxk-website-firebase-adminsdk-*.json
+__pycache__
