@@ -2,16 +2,6 @@
 
 ---
 
-## Requirements
-
-- **Node.js v18.x** (or higher)  
-[Download Node.js here](https://nodejs.org/)
-
-- **Git** (optional, for cloning)  
-[Download Git here](https://git-scm.com/)
-
----
-
 ##  Setup & Installation
 
 ### 1️⃣ Clone the Repository
@@ -56,5 +46,6 @@ python run.py
 
 
 ```
+
 
 
