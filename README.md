@@ -1,11 +1,9 @@
 # JaxK Website
 
-This is the official repository for the **JaxK Website**, a platform for our competitive gaming organization **JaxK**.  
-Follow these instructions to set up, run, and develop the project locally.
-
+This is the official repository for the **JaxK Website Tempalte**
 ---
 
-## 🚀 Requirements
+## Requirements
 
 - **Node.js v18.x** (or higher)  
 [Download Node.js here](https://nodejs.org/)
@@ -15,7 +13,7 @@ Follow these instructions to set up, run, and develop the project locally.
 
 ---
 
-## 🛠️ Setup & Installation
+##  Setup & Installation
 
 ### 1️⃣ Clone the Repository
 
@@ -56,5 +54,6 @@ npm install -g npm@11.3.0
 ```
 pip install docker
 python run.py
+
 
 ```
