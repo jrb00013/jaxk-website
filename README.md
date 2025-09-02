@@ -1,6 +1,5 @@
 # JaxK Website Template
 
-This is the official repository for the **JaxK Website Template**
 ---
 
 ## Requirements
@@ -57,4 +56,5 @@ python run.py
 
 
 ```
+
 
