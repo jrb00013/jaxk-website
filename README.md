@@ -1,4 +1,4 @@
-# JaxK Website Template
+# JaxK Website Boilerplate
 
 ---
 
